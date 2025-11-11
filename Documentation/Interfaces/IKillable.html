@@ -62,53 +62,53 @@
                             <div class="toc" id="customScrollbar" style="height: 544px;">
                                 <h2>Scripting API</h2>
                                 <ul>
-                                    <li class="nl"> <!-- Attributes -->
-                                        <div class="arrow expanded"></div>
+                                    <li class="nl"> <!-- Attributes-->
+                                        <div class="arrow collapsed"></div>
                                         <span>Attributes</span>
-                                        <ul>
-                                            <li class="nl">
-                                                <div class="leafnode expanded"></div>
-                                                <a href="ReadOnly.html" id="current" class="current">ReadOnly Attribute</a>
-                                            </li>
-                                            <li class="nl">
-                                                <div class="leafnode"></div>
-                                                <a href="Required.html" id class>Required Attribute</a>
-                                            </li>
-                                        </ul>
+                                            <ul style="display: none;">
+                                                <li class="nl">
+                                                    <div class="leafnode"></div>
+                                                    <a href="../Attributes/ReadOnly.html">ReadOnly Attribute</a>
+                                                </li>
+                                                <li class="nl">
+                                                    <div class="leafnode"></div>
+                                                    <a href="../Attributes/Required.html">Required Attribute</a>
+                                                </li>
+                                            </ul>
                                     </li>
                                 </ul>
                                 <ul>
                                     <li class="nl"> <!-- Interfaces -->
-                                        <div class="arrow collapsed"></div>
+                                        <div class="arrow expanded"></div>
                                         <span>Interfaces</span>
-                                        <ul style="display: none;">
+                                        <ul style>
                                             <li class="nl">
                                                 <div class="leafnode"></div>
-                                                <a href="../Interfaces/IDamagable.html">IDamagable</a>
+                                                <a href="IDamagable.html">IDamagable</a>
                                             </li>
                                             <li class="nl">
                                                 <div class="leafnode"></div>
-                                                <a href="../Interfaces/IHealable.html">IHealable</a>
+                                                <a href="IHealable.html">IHealable</a>
                                             </li>
                                             <li class="nl">
                                                 <div class="leafnode"></div>
-                                                <a href="../Interfaces/IHiddenObject.html">IHiddenObject</a>
+                                                <a href="IHiddenObject.html">IHiddenObject</a>
+                                            </li>
+                                            <li class="nl">
+                                                <div class="leafnode expanded"></div>
+                                                <a href="IKillable.html" id="current" class="current">IKillable</a>
                                             </li>
                                             <li class="nl">
                                                 <div class="leafnode"></div>
-                                                <a href="../Interfaces/IKillable.html">IKillable</a>
+                                                <a href="IPlayerTool.html">IPlayerTool</a>
                                             </li>
                                             <li class="nl">
                                                 <div class="leafnode"></div>
-                                                <a href="../Interfaces/IPlayerTool.html">IPlayerTool</a>
+                                                <a href="IScareable.html">IScareable</a>
                                             </li>
                                             <li class="nl">
                                                 <div class="leafnode"></div>
-                                                <a href="../Interfaces/IScareable.html">IScareable</a>
-                                            </li>
-                                            <li class="nl">
-                                                <div class="leafnode"></div>
-                                                <a href="../Interfaces/IState.html">IState</a>
+                                                <a href="IState.html">IState</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -155,12 +155,10 @@
                     <div class="content">
                         <div class="section">
                             <div class="mb20 clear" id="">
-                                <h1 class="heading inherit">ReadOnly</h1>
+                                <h1 class="heading inherit">IKillable</h1>
                                 <div class="clear">
                                 </div>
-                                <p class="cl mb0 left mr10">class in Core.Shared</p>
-                                <p class="cl mb0 left mr10">/</p>
-                                <p class="cl mb0 left">Implemented in: <u>Core.Shared.Utilities</u></p>
+                                <p class="cl mb0 left mr10">interface in Gameplay.HealthSystem</p>
                                 <div class="clear">
                                 </div>
                                 <div class="clear">
@@ -168,35 +166,31 @@
                             </div>
                             <div class="subsection">
                                 <h3>Description</h3>
-                                <p> Make users unable to modify a field in inspector.
-                                    <br><br>
-                                    When a variable or field is public in the inspector or serialized, the user is able to modify the field
-                                    at will.
-                                    <br><br>
-                                    For those fields that the user needs in inspector but don't want to touch add the <code class="mono">
-                                    [ReadOnly]</code> attribute to them. Unity will show that field in the inspector grayed out. That field
-                                    is visible but cannot be interacted with or modified.
-                                </p>
+                                <p> Interface for class capable to die.</p>
                             </div>
-                            <div class="subsection" tabindex="0" style="position: relative;"><button class="copy-code"
-                                    title="Copy" type="button" aria-label="Copy code sample to the clipboard"
-                                    style="opacity: 0;"></button>
-                                    <pre class="codeExampleCS">
-using UnityEngine;
-using Core.Shared.Utilities<br>
-public class ExampleScript : MonoBehaviour
-{
-    //Those field can be modified in inspector
-    public float modifier = 2.5f;
-    [SerializeField] private int number = 2025<br>
-    //This variable is public but can not be modified in inspector
-    [<a href="ReadOnly.html">ReadOnly</a>] public float hour;<br>
-    void Update()
-    {
-        hour += (modifier / number) * Time.deltaTime;
-    }
-}</pre>
-                                <div aria-live="polite" class="sr-only"></div>
+                            <br>
+                            <div class="subsection">
+                                <h3>Public Methods</h3>
+                                <table class="list">
+                                    <thead><tr>
+                                        <th>Method</th>
+                                        <th>Description</th>
+                                    </tr></thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">DeathEvent</code></td>
+                                            <td class="desc">
+                                                Handles an event variable. This will propagate another event. Returns a UnityEvent.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">Die</code></td>
+                                            <td class="desc">
+                                                Function that will handle how the class will die.
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                         <div class="footer-wrapper">
