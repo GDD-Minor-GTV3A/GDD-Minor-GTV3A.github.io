@@ -61,48 +61,63 @@
                     <div class="content">
                         <div class="section">
                             <div class="mb20 clear" id="">
-                                <h1 class="heading inherit">ReadOnly</h1>
+                                <h1 class="heading inherit">Player</h1>
                                 <div class="clear">
                                 </div>
-                                <p class="cl mb0 left mr10">class in Core.Shared</p>
+                                <p class="cl mb0 left mr10">class in Team1</p>
                                 <p class="cl mb0 left mr10">/</p>
-                                <p class="cl mb0 left">Implemented in: <u>Core.Shared.Utilities</u></p>
+                                <p class="cl mb0 left">Implemented in: <u>Gameplay.Player</u></p>
                                 <div class="clear">
                                 </div>
+        
                                 <div class="clear">
                                 </div>
                             </div>
                             <div class="subsection">
+                                <div class="signature">
+                                    <div class="signature-CS sig-block">
+                                        <span style="color:red;">
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="subsection">
                                 <h3>Description</h3>
-                                <p> Make users unable to modify a field in inspector.
+                                <p> Main class of the player.
                                     <br><br>
-                                    When a variable or field is public in the inspector or serialized, the user is able to modify the field
-                                    at will.
+                                    This is the base class of the player and the one responsible to manage it.
                                     <br><br>
-                                    For those fields that the user needs in inspector but don't want to touch add the <code class="mono">
-                                    [ReadOnly]</code> attribute to them. Unity will show that field in the inspector grayed out. That field
-                                    is visible but cannot be interacted with or modified.
                                 </p>
                             </div>
-                            <div class="subsection" tabindex="0" style="position: relative;"><button class="copy-code"
-                                    title="Copy" type="button" aria-label="Copy code sample to the clipboard"
-                                    style="opacity: 0;"></button>
-                                    <pre class="codeExampleCS">
-using UnityEngine;
-using Core.Shared.Utilities<br>
-public class ExampleScript : MonoBehaviour
-{
-    //Those field can be modified in inspector
-    public float modifier = 2.5f;
-    [SerializeField] private int number = 2025<br>
-    //This variable is public but can not be modified in inspector
-    [<a href="ReadOnly.html">ReadOnly</a>] public float hour;<br>
-    void Update()
-    {
-        hour += (modifier / number) * Time.deltaTime;
-    }
-}</pre>
-                                <div aria-live="polite" class="sr-only"></div>
+                            <!-- Table of calls -->
+                            <div class="subsection">
+                                <h3>Public Methods</h3>
+                                <table class="list">
+                                    <thead><tr>
+                                        <th>Method</th>
+                                        <th>Description</th>
+                                    </tr></thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">DamageEvent</code></td>
+                                            <td class="desc">
+                                                This event is invoked when the player takes damage. Can subscribe from the editor.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">DeathEvent</code></td>
+                                            <td class="desc">
+                                                This event is invoked when the player dies. Can subscribe from the editor.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">HealEvent</code></td>
+                                            <td class="desc">
+                                                This event is invoked when the player gets healed. Can subscribe from the editor.
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                         <div class="footer-wrapper">

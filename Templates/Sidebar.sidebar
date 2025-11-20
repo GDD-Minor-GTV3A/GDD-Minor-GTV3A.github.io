@@ -3,7 +3,7 @@
         <div class="sidebar-menu">
             <div class="toc" id="customScrollbar" style="height: 544px;">
                 <h2>Scripting API</h2>
-                <ul> <!-- Attributes-->
+                <ul> <!-- Attributes -->
                     <li class="nl">
                         <div class="arrow collapsed"></div>
                         <span>Attributes</span>
@@ -15,6 +15,38 @@
                                 <li class="nl">
                                     <div class="leafnode"></div>
                                     <a href="Required.html" class>Required</a>
+                                </li>
+                            </ul>
+                    </li>
+                </ul>
+                <ul> <!-- Enums -->
+                    <li class="nl">
+                        <div class="arrow collapsed"></div>
+                        <span>Enums</span>
+                            <ul style="display: none;">
+                                <li class="nl">
+                                    <div class="leafnode"></div>
+                                    <a href="CameraType.html" class>CameraType</a>
+                                </li>
+                                <li class="nl">
+                                    <div class="leafnode"></div>
+                                    <a href="EnemyState.html" class>EnemyState</a>
+                                </li>
+                                <li class="nl">
+                                    <div class="leafnode"></div>
+                                    <a href="ObjectiveType.html" class>ObjectiveType</a>
+                                </li>
+                                <li class="nl">
+                                    <div class="leafnode"></div>
+                                    <a href="PersonalityType.html" class>PersonalityType</a>
+                                </li>
+                                <li class="nl">
+                                    <div class="leafnode"></div>
+                                    <a href="ScareType.html" class>ScareType</a>
+                                </li>
+                                <li class="nl">
+                                    <div class="leafnode"></div>
+                                    <a href="SheepAnimState.html" class>SheepAnimState</a>
                                 </li>
                             </ul>
                     </li>
@@ -55,7 +87,7 @@
                         </ul>
                     </li>
                 </ul>
-                <ul> <!-- Input System-->
+                <ul> <!-- Input System -->
                     <li class="nl">
                         <div class="arrow collapsed"></div>
                         <span>Input System</span>
@@ -67,6 +99,22 @@
                                 <li class="nl">
                                     <div class="leafnode"></div>
                                     <a href="PlayerInput.html" class>PlayerInput</a>
+                                </li>
+                            </ul>
+                    </li>
+                </ul>
+                <ul> <!-- Player -->
+                    <li class="nl">
+                        <div class="arrow collapsed"></div>
+                        <span>Player</span>
+                            <ul style="display: none;">
+                                <li class="nl">
+                                    <div class="leafnode"></div>
+                                    <a href="DogBark.html" class>DogBark</a>
+                                </li>
+                                <li class="nl">
+                                    <div class="leafnode"></div>
+                                    <a href="Player.html" class>Player</a>
                                 </li>
                             </ul>
                     </li>

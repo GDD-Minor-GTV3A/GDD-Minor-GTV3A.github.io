@@ -70,6 +70,14 @@ function HighlightActiveLink() {
         // match exact or trailing path (keeps behavior if site is served from different base)
         if (current === resolvedPath || current.endsWith(resolvedPath)) {
             link.classList.add("current");
+            link.setAttribute("id", "current");
+
+            // also mark the preceding leafnode (if present) so the node
+            // visually matches the anchor's active state
+            const prevSibling = link.previousElementSibling;
+            if (prevSibling && prevSibling.classList.contains('leafnode')) {
+                prevSibling.classList.add('expanded');
+            }
 
             // expand all ancestor groups so nested sections reveal the active link
             let parentUl = link.closest('ul');
