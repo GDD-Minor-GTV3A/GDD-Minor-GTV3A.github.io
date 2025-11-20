@@ -1,0 +1,31 @@
+site_name: The Herd Documentation
+
+nav:
+  - Home: index.md
+  - API Reference:
+    - Gameplay:
+      - CameraType: CameraType.md
+      - ObjectiveType: ObjectiveType.md
+    - Gameplay.Dog:
+      - DogBark: DogBark.md
+      - IScareable: IScareable.md
+      - ScareType: ScareType.md
+    - Gameplay.HealthSystem:
+      - IDamagable: IDamagable.md
+      - IHealable: IHealable.md
+      - IKillable: IKillable.md
+    - Team1:
+      - Player: Player.md
+      - PlayerInput: PlayerInput.md
+    - Core:
+      - InputHandler: InputHandler.md
+    - Core.Shared:
+      - IHiddenObject: IHiddenObject.md
+      - IPlayerTool: IPlayerTool.md
+      - IState: IState.md
+      - ReadOnly: ReadOnly.md
+      - Required: Required.md
+    - AI:
+      - EnemyState: EnemyState.md
+      - PersonalityType: PersonalityType.md
+      - SheepAnimState: SheepAnimState.md
