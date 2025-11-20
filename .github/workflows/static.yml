@@ -43,8 +43,11 @@ jobs:
           cp -r images site/ || true
           cp -r js site/ || true
           cp -r Templates site/ || true
-          # Fix common relative paths in the HTML files (../css -> css, etc.)
-          find site -type f -name '*.html' -print0 | xargs -0 sed -i 's#\.\./css/#css/#g; s#\.\./js/#js/#g; s#\.\./images/#images/#g; s#\.\./Templates/#Templates/#g' || true
+          # Fix common relative paths in HTML and CSS files:
+          # - ../css/ -> css/
+          # - /css/ -> css/ (remove leading slash so assets resolve under project pages path)
+          # - apply same rules for js, images and Templates
+          find site -type f \( -name '*.html' -o -name '*.css' \) -print0 | xargs -0 sed -i "s#\.\./css/#css/#g; s#\.\./js/#js/#g; s#\.\./images/#images/#g; s#\.\./Templates/#Templates/#g; s#\"/css/#\"css/#g; s#\'\/css/#\'css/#g; s#(/|\s)/css/#css/#g; s#\"/js/#\"js/#g; s#\'\/js/#\'js/#g; s#(/|\s)/js/#js/#g; s#\"/images/#\"images/#g; s#\'\/images/#\'images/#g; s#(/|\s)/images/#images/#g" || true
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
