@@ -9,7 +9,7 @@ document.querySelector('build').innerHTML = '20-11-2025';
 document.addEventListener("DOMContentLoaded", () => {
     const sidebarEl = document.getElementById("sidebar");
     
-    fetch("./Templates/Sidebar.sidebar")
+    fetch("/Templates/Sidebar.sidebar")
     .then(res => res.text())
     .then(html => {
         sidebarEl.innerHTML = html;
