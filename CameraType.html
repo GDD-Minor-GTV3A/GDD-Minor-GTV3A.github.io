@@ -6,9 +6,9 @@
     <meta name="description" content="Documentation for The Herd project, including setup guides, usage instructions, and API references.">
     <meta name="author" content="The Herd Team">
     <title>The Herd Documentation</title>
-    <link rel="icon" href="../images/github-mark-white.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/core.css">
-    <script src="../js/main.js" defer></script>
+    <link rel="icon" href="/images/github-mark-white.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/core.css">
+    <script src="/js/main.js" defer></script>
 </head>
 <body>
         <div class="header-wrapper">
@@ -61,12 +61,12 @@
                     <div class="content">
                         <div class="section">
                             <div class="mb20 clear" id="">
-                                <h1 class="heading inherit">PersonalityType</h1>
+                                <h1 class="heading inherit">CameraType</h1>
                                 <div class="clear">
                                 </div>
-                                <p class="cl mb0 left mr10">class in AI</p>
+                                <p class="cl mb0 left mr10">class in Gameplay</p>
                                 <p class="cl mb0 left mr10">/</p>
-                                <p class="cl mb0 left">Implemented in: <u>Core.AI.Sheep.Config</u></p>
+                                <p class="cl mb0 left">Implemented in: <u>Gameplay.CameraSettings</u></p>
                                 <div class="clear">
                                 </div>
         
@@ -83,10 +83,9 @@
                             </div>
                             <div class="subsection">
                                 <h3>Description</h3>
-                                <p> Enum for available personality types for the sheep.
+                                <p> Enum for the mode of the camera.
                                     <br><br>
-                                    Changing personality will sligtly change how the sheep will react. Sheep personality type can be set
-                                    in the <code class="mono">SheepArchetype</code> scriptableObject.
+                                    Can be set in the <code class="mono">CameraConfig</code> scriptableObject.
                                     <br><br>
                                 </p>
                             </div>
@@ -100,33 +99,15 @@
                                     </tr></thead>
                                     <tbody>
                                         <tr>
-                                            <td class="lbl"><code class="mono">Normal</code></td>
+                                            <td class="lbl"><code class="mono">Orthographic</code></td>
                                             <td class="desc">
-                                                Set the type of personality to a normal personality.
+                                                Will set the camera to an orthographic mode.
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="lbl"><code class="mono">Lazy</code></td>
+                                            <td class="lbl"><code class="mono">Perspective</code></td>
                                             <td class="desc">
-                                                Set the type of personality to a lazy personality.
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="lbl"><code class="mono">Energetic</code></td>
-                                            <td class="desc">
-                                                Set the type of personality to a energetic personality.
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="lbl"><code class="mono">Nervous</code></td>
-                                            <td class="desc">
-                                                Set the type of personality to a nervous personality.
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="lbl"><code class="mono">Stubborn</code></td>
-                                            <td class="desc">
-                                                Set the type of personality to a stubborn personality.
+                                                Will set the camera to a perspective mode.
                                             </td>
                                         </tr>
                                     </tbody>

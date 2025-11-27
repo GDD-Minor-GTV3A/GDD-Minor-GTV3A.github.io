@@ -6,9 +6,9 @@
     <meta name="description" content="Documentation for The Herd project, including setup guides, usage instructions, and API references.">
     <meta name="author" content="The Herd Team">
     <title>The Herd Documentation</title>
-    <link rel="icon" href="../images/github-mark-white.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/core.css">
-    <script src="../js/main.js" defer></script>
+    <link rel="icon" href="images/github-mark-white.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/core.css">
+    <script src="js/main.js" defer></script>
 </head>
 <body>
         <div class="header-wrapper">
@@ -61,36 +61,20 @@
                     <div class="content">
                         <div class="section">
                             <div class="mb20 clear" id="">
-                                <h1 class="heading inherit">PlayerInput</h1>
+                                <h1 class="heading inherit">IState</h1>
                                 <div class="clear">
                                 </div>
-                                <p class="cl mb0 left mr10">class in Team1</p>
-                                <p class="cl mb0 left mr10">/</p>
-                                <p class="cl mb0 left">Implemented in: <u>Gameplay.Player</u></p>
+                                <p class="cl mb0 left mr10">interface in Core.Shared.StateMachine</p>
                                 <div class="clear">
                                 </div>
-        
                                 <div class="clear">
-                                </div>
-                            </div>
-                            <div class="subsection">
-                                <div class="signature">
-                                    <div class="signature-CS sig-block">
-                                        <span style="color:red;">
-                                        </span>
-                                    </div>
                                 </div>
                             </div>
                             <div class="subsection">
                                 <h3>Description</h3>
-                                <p> Class responsable to read and broadcast player inputs.
-                                    <br><br>
-                                    Holds every input action for the player and returns it with public getters for each action. This script is
-                                    responsable to initialize all player input actions and manage the cursor position in the game world.
-                                    <br><br>
-                                </p>
+                                <p> Interface for states which are used in state managers.</p>
                             </div>
-                            <!-- Table of calls -->
+                            <br>
                             <div class="subsection">
                                 <h3>Public Methods</h3>
                                 <table class="list">
@@ -100,63 +84,22 @@
                                     </tr></thead>
                                     <tbody>
                                         <tr>
-                                            <td class="lbl"><code class="mono">Move</code></td>
+                                            <td class="lbl"><code class="mono">OnStart</code></td>
                                             <td class="desc">
-                                                Returns a Vector2 value for the movement input of the player.
+                                                This method is called when one enter that state.
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="lbl"><code class="mono">Look</code></td>
+                                            <td class="lbl"><code class="mono">OnStop</code></td>
                                             <td class="desc">
-                                                Current position of the cursor in the world. Returns an <a href="">Observable</a>.
+                                                This method is called when one exit that state.
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="lbl"><code class="mono">Run</code></td>
+                                            <td class="lbl"><code class="mono">OnUpdate</code></td>
                                             <td class="desc">
-                                                Getter for the run button. Returns <b>true</b> when sprint button is hold, otherwhise <b>false</b>.
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="lbl"><code class="mono">Reload</code></td>
-                                            <td class="desc">
-                                                Input action for reload button. Returns an InputAction. Use for this actions: started, performed, canceled.
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="lbl"><code class="mono">MainUsage</code></td>
-                                            <td class="desc">
-                                                Input action for main usage button. Returns an InputAction. Use for this actions: started, performed, canceled.
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="lbl"><code class="mono">SecondaryUsage</code></td>
-                                            <td class="desc">
-                                                Input action for secondary usage button. Returns an InputAction. Use for this actions: started, performed, canceled.
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="lbl"><code class="mono">SlotsScroll</code></td>
-                                            <td class="desc">
-                                                Input action for scrolling. Returns an InputAction. Use for this actions: started, performed, canceled.
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="lbl"><code class="mono">Slot_1</code></td>
-                                            <td class="desc">
-                                                Input action for slot 1 button. Returns an InputAction. Use for this actions: started, performed, canceled.
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="lbl"><code class="mono">Slot_2</code></td>
-                                            <td class="desc">
-                                                Input action for slot 2 button. Returns an InputAction. Use for this actions: started, performed, canceled.
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="lbl"><code class="mono">Slot_3</code></td>
-                                            <td class="desc">
-                                                Input action for slot 3 button. Returns an InputAction. Use for this actions: started, performed, canceled.
+                                                This method is called after the <code class="mono">OnStart</code> method and is called
+                                                for each frame of the state or untile the <code class="mono">OnStop</code> method is called.
                                             </td>
                                         </tr>
                                     </tbody>

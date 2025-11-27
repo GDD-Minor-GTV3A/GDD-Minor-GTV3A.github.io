@@ -6,9 +6,9 @@
     <meta name="description" content="Documentation for The Herd project, including setup guides, usage instructions, and API references.">
     <meta name="author" content="The Herd Team">
     <title>The Herd Documentation</title>
-    <link rel="icon" href="../images/github-mark-white.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/core.css">
-    <script src="../js/main.js" defer></script>
+    <link rel="icon" href="images/github-mark-white.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/core.css">
+    <script src="js/main.js" defer></script>
 </head>
 <body>
         <div class="header-wrapper">
@@ -61,12 +61,12 @@
                     <div class="content">
                         <div class="section">
                             <div class="mb20 clear" id="">
-                                <h1 class="heading inherit">Player</h1>
+                                <h1 class="heading inherit">ObjectiveType</h1>
                                 <div class="clear">
                                 </div>
-                                <p class="cl mb0 left mr10">class in Team1</p>
+                                <p class="cl mb0 left mr10">class in Gameplay</p>
                                 <p class="cl mb0 left mr10">/</p>
-                                <p class="cl mb0 left">Implemented in: <u>Gameplay.Player</u></p>
+                                <p class="cl mb0 left">Implemented in: <u> --- </u></p>
                                 <div class="clear">
                                 </div>
         
@@ -83,9 +83,9 @@
                             </div>
                             <div class="subsection">
                                 <h3>Description</h3>
-                                <p> Main class of the player.
+                                <p> Enum representing different types of objectives.
                                     <br><br>
-                                    This is the base class of the player and the one responsible to manage it.
+                                    This enum is used when creating a new quest for the player.
                                     <br><br>
                                 </p>
                             </div>
@@ -99,21 +99,33 @@
                                     </tr></thead>
                                     <tbody>
                                         <tr>
-                                            <td class="lbl"><code class="mono">DamageEvent</code></td>
+                                            <td class="lbl"><code class="mono">CollectItem</code></td>
                                             <td class="desc">
-                                                This event is invoked when the player takes damage. Can subscribe from the editor.
+                                                Will set the quest to be a type of collection quest.
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="lbl"><code class="mono">DeathEvent</code></td>
+                                            <td class="lbl"><code class="mono">DefeatEnemy</code></td>
                                             <td class="desc">
-                                                This event is invoked when the player dies. Can subscribe from the editor.
+                                                Will set the quest to be a type of defeating enemy quest.
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="lbl"><code class="mono">HealEvent</code></td>
+                                            <td class="lbl"><code class="mono">ReachLocation</code></td>
                                             <td class="desc">
-                                                This event is invoked when the player gets healed. Can subscribe from the editor.
+                                                Will set the quest to be a type of reaching a location quest.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">TalkNPC</code></td>
+                                            <td class="desc">
+                                                Will set the quest to be a type of talkative quest.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">Custom</code></td>
+                                            <td class="desc">
+                                                Will set the quest to be a custom type of quest.
                                             </td>
                                         </tr>
                                     </tbody>

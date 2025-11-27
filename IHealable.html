@@ -6,9 +6,9 @@
     <meta name="description" content="Documentation for The Herd project, including setup guides, usage instructions, and API references.">
     <meta name="author" content="The Herd Team">
     <title>The Herd Documentation</title>
-    <link rel="icon" href="../images/github-mark-white.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/core.css">
-    <script src="../js/main.js" defer></script>
+    <link rel="icon" href="images/github-mark-white.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/core.css">
+    <script src="js/main.js" defer></script>
 </head>
 <body>
         <div class="header-wrapper">
@@ -61,33 +61,20 @@
                     <div class="content">
                         <div class="section">
                             <div class="mb20 clear" id="">
-                                <h1 class="heading inherit">DogBark</h1>
+                                <h1 class="heading inherit">IHealable</h1>
                                 <div class="clear">
                                 </div>
-                                <p class="cl mb0 left mr10">class in Team1</p>
-                                <p class="cl mb0 left mr10">/</p>
-                                <p class="cl mb0 left">Implemented in: <u>Gameplay.Dog</u></p>
+                                <p class="cl mb0 left mr10">interface in Gameplay.HealthSystem</p>
                                 <div class="clear">
                                 </div>
-        
                                 <div class="clear">
-                                </div>
-                            </div>
-                            <div class="subsection">
-                                <div class="signature">
-                                    <div class="signature-CS sig-block">
-                                        <span style="color:red;">
-                                        </span>
-                                    </div>
                                 </div>
                             </div>
                             <div class="subsection">
                                 <h3>Description</h3>
-                                <p> Class that manage the bark of the dog.
-                                    <br><br>
-                                </p>
+                                <p> Interface for class capable of recieving heal.</p>
                             </div>
-                            <!-- Table of calls -->
+                            <br>
                             <div class="subsection">
                                 <h3>Public Methods</h3>
                                 <table class="list">
@@ -97,16 +84,16 @@
                                     </tr></thead>
                                     <tbody>
                                         <tr>
-                                            <td class="lbl"><code class="mono">onDogBark</code></td>
+                                            <td class="lbl"><code class="mono">HealEvent</code></td>
                                             <td class="desc">
-                                                This event is invoked when the dog bark.
+                                                Handles an event variable. This will propagate another event. Returns a UnityEvent.
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="lbl"><code class="mono">TryBark</code></td>
+                                            <td class="lbl"><code class="mono">Heal</code></td>
                                             <td class="desc">
-                                                If possible to bark, scares all <a href="IScareable.html">IScareable</a> around the dog.
-                                                This function will also inkoke the <code class="mono">onDogBark</code> event.
+                                                Function that will handle how the class will compute heal. Takes a float as a parameter.
+                                                Call this funciton to heal the implementing class.
                                             </td>
                                         </tr>
                                     </tbody>

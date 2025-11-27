@@ -6,9 +6,9 @@
     <meta name="description" content="Documentation for The Herd project, including setup guides, usage instructions, and API references.">
     <meta name="author" content="The Herd Team">
     <title>The Herd Documentation</title>
-    <link rel="icon" href="../images/github-mark-white.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/core.css">
-    <script src="../js/main.js" defer></script>
+    <link rel="icon" href="images/github-mark-white.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/core.css">
+    <script src="js/main.js" defer></script>
 </head>
 <body>
         <div class="header-wrapper">
@@ -61,20 +61,35 @@
                     <div class="content">
                         <div class="section">
                             <div class="mb20 clear" id="">
-                                <h1 class="heading inherit">IState</h1>
+                                <h1 class="heading inherit">Player</h1>
                                 <div class="clear">
                                 </div>
-                                <p class="cl mb0 left mr10">interface in Core.Shared.StateMachine</p>
+                                <p class="cl mb0 left mr10">class in Team1</p>
+                                <p class="cl mb0 left mr10">/</p>
+                                <p class="cl mb0 left">Implemented in: <u>Gameplay.Player</u></p>
                                 <div class="clear">
                                 </div>
+        
                                 <div class="clear">
                                 </div>
                             </div>
                             <div class="subsection">
-                                <h3>Description</h3>
-                                <p> Interface for states which are used in state managers.</p>
+                                <div class="signature">
+                                    <div class="signature-CS sig-block">
+                                        <span style="color:red;">
+                                        </span>
+                                    </div>
+                                </div>
                             </div>
-                            <br>
+                            <div class="subsection">
+                                <h3>Description</h3>
+                                <p> Main class of the player.
+                                    <br><br>
+                                    This is the base class of the player and the one responsible to manage it.
+                                    <br><br>
+                                </p>
+                            </div>
+                            <!-- Table of calls -->
                             <div class="subsection">
                                 <h3>Public Methods</h3>
                                 <table class="list">
@@ -84,22 +99,21 @@
                                     </tr></thead>
                                     <tbody>
                                         <tr>
-                                            <td class="lbl"><code class="mono">OnStart</code></td>
+                                            <td class="lbl"><code class="mono">DamageEvent</code></td>
                                             <td class="desc">
-                                                This method is called when one enter that state.
+                                                This event is invoked when the player takes damage. Can subscribe from the editor.
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="lbl"><code class="mono">OnStop</code></td>
+                                            <td class="lbl"><code class="mono">DeathEvent</code></td>
                                             <td class="desc">
-                                                This method is called when one exit that state.
+                                                This event is invoked when the player dies. Can subscribe from the editor.
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="lbl"><code class="mono">OnUpdate</code></td>
+                                            <td class="lbl"><code class="mono">HealEvent</code></td>
                                             <td class="desc">
-                                                This method is called after the <code class="mono">OnStart</code> method and is called
-                                                for each frame of the state or untile the <code class="mono">OnStop</code> method is called.
+                                                This event is invoked when the player gets healed. Can subscribe from the editor.
                                             </td>
                                         </tr>
                                     </tbody>

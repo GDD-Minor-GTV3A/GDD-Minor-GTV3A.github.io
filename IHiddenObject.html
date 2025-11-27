@@ -6,9 +6,9 @@
     <meta name="description" content="Documentation for The Herd project, including setup guides, usage instructions, and API references.">
     <meta name="author" content="The Herd Team">
     <title>The Herd Documentation</title>
-    <link rel="icon" href="../images/github-mark-white.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/core.css">
-    <script src="../js/main.js" defer></script>
+    <link rel="icon" href="images/github-mark-white.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/core.css">
+    <script src="js/main.js" defer></script>
 </head>
 <body>
         <div class="header-wrapper">
@@ -61,10 +61,10 @@
                     <div class="content">
                         <div class="section">
                             <div class="mb20 clear" id="">
-                                <h1 class="heading inherit">IScareable</h1>
+                                <h1 class="heading inherit">IHiddenObject</h1>
                                 <div class="clear">
                                 </div>
-                                <p class="cl mb0 left mr10">interface in Gameplay.Dog</p>
+                                <p class="cl mb0 left mr10">interface in Core.Shared</p>
                                 <div class="clear">
                                 </div>
                                 <div class="clear">
@@ -72,7 +72,7 @@
                             </div>
                             <div class="subsection">
                                 <h3>Description</h3>
-                                <p> Interface for class capable of being scared.</p>
+                                <p> Interface for class capable of using objects that can be hidden.</p>
                             </div>
                             <br>
                             <div class="subsection">
@@ -84,10 +84,28 @@
                                     </tr></thead>
                                     <tbody>
                                         <tr>
-                                            <td class="lbl"><code class="mono">OnScared</code></td>
+                                            <td class="lbl"><code class="mono">DynamicallyAddHiddenObject</code></td>
                                             <td class="desc">
-                                                Function that handles the behaviour of the class when scared. Takes 3 parameters as input:
-                                                Vector3, float and <a href="ScareType">ScareType</a>.
+                                                Dynamically adds hidden object to fog of war.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">DynamicallyRemoveHiddenObject</code></td>
+                                            <td class="desc">
+                                                Dynamically removes hidden object from fog of war.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">GetPosition</code></td>
+                                            <td class="desc">
+                                                Returns the position of the rendered object
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">SetVisible</code></td>
+                                            <td class="desc">
+                                                Sets visibility of this object. Takes a bool as parameter, where <b>true</b> = visible and
+                                                <b>false</b> = not visible.
                                             </td>
                                         </tr>
                                     </tbody>

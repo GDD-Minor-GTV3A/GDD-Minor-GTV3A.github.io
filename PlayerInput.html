@@ -6,9 +6,9 @@
     <meta name="description" content="Documentation for The Herd project, including setup guides, usage instructions, and API references.">
     <meta name="author" content="The Herd Team">
     <title>The Herd Documentation</title>
-    <link rel="icon" href="../images/github-mark-white.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/core.css">
-    <script src="../js/main.js" defer></script>
+    <link rel="icon" href="images/github-mark-white.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/core.css">
+    <script src="js/main.js" defer></script>
 </head>
 <body>
         <div class="header-wrapper">
@@ -61,12 +61,12 @@
                     <div class="content">
                         <div class="section">
                             <div class="mb20 clear" id="">
-                                <h1 class="heading inherit">ScareType</h1>
+                                <h1 class="heading inherit">PlayerInput</h1>
                                 <div class="clear">
                                 </div>
-                                <p class="cl mb0 left mr10">class in Gameplay.Dog</p>
+                                <p class="cl mb0 left mr10">class in Team1</p>
                                 <p class="cl mb0 left mr10">/</p>
-                                <p class="cl mb0 left">Implemented in: <u> --- </u></p>
+                                <p class="cl mb0 left">Implemented in: <u>Gameplay.Player</u></p>
                                 <div class="clear">
                                 </div>
         
@@ -83,10 +83,10 @@
                             </div>
                             <div class="subsection">
                                 <h3>Description</h3>
-                                <p> Enums for different types of scare.
+                                <p> Class responsable to read and broadcast player inputs.
                                     <br><br>
-                                    This enums defines what is the source of the scare. It is a parameter of the <code class="mono">OnScared</code>
-                                    function in the <a href="IScareable.html">IScareable</a> interface.
+                                    Holds every input action for the player and returns it with public getters for each action. This script is
+                                    responsable to initialize all player input actions and manage the cursor position in the game world.
                                     <br><br>
                                 </p>
                             </div>
@@ -100,39 +100,63 @@
                                     </tr></thead>
                                     <tbody>
                                         <tr>
-                                            <td class="lbl"><code class="mono">DogBark</code></td>
+                                            <td class="lbl"><code class="mono">Move</code></td>
                                             <td class="desc">
-                                                The source comes from a dog bark.
+                                                Returns a Vector2 value for the movement input of the player.
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="lbl"><code class="mono">Growl</code></td>
+                                            <td class="lbl"><code class="mono">Look</code></td>
                                             <td class="desc">
-                                                The source comes from a growl.
+                                                Current position of the cursor in the world. Returns an <a href="">Observable</a>.
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="lbl"><code class="mono">Explosion</code></td>
+                                            <td class="lbl"><code class="mono">Run</code></td>
                                             <td class="desc">
-                                                The source comes from an explosion.
+                                                Getter for the run button. Returns <b>true</b> when sprint button is hold, otherwhise <b>false</b>.
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="lbl"><code class="mono">Gunshot</code></td>
+                                            <td class="lbl"><code class="mono">Reload</code></td>
                                             <td class="desc">
-                                                The source comes from a gunshot.
+                                                Input action for reload button. Returns an InputAction. Use for this actions: started, performed, canceled.
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="lbl"><code class="mono">Thunder</code></td>
+                                            <td class="lbl"><code class="mono">MainUsage</code></td>
                                             <td class="desc">
-                                                The source comes from a thunder.
+                                                Input action for main usage button. Returns an InputAction. Use for this actions: started, performed, canceled.
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="lbl"><code class="mono">Other</code></td>
+                                            <td class="lbl"><code class="mono">SecondaryUsage</code></td>
                                             <td class="desc">
-                                                The source comes from something else.
+                                                Input action for secondary usage button. Returns an InputAction. Use for this actions: started, performed, canceled.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">SlotsScroll</code></td>
+                                            <td class="desc">
+                                                Input action for scrolling. Returns an InputAction. Use for this actions: started, performed, canceled.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">Slot_1</code></td>
+                                            <td class="desc">
+                                                Input action for slot 1 button. Returns an InputAction. Use for this actions: started, performed, canceled.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">Slot_2</code></td>
+                                            <td class="desc">
+                                                Input action for slot 2 button. Returns an InputAction. Use for this actions: started, performed, canceled.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">Slot_3</code></td>
+                                            <td class="desc">
+                                                Input action for slot 3 button. Returns an InputAction. Use for this actions: started, performed, canceled.
                                             </td>
                                         </tr>
                                     </tbody>

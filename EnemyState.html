@@ -6,9 +6,9 @@
     <meta name="description" content="Documentation for The Herd project, including setup guides, usage instructions, and API references.">
     <meta name="author" content="The Herd Team">
     <title>The Herd Documentation</title>
-    <link rel="icon" href="../images/github-mark-white.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/core.css">
-    <script src="../js/main.js" defer></script>
+    <link rel="icon" href="/images/github-mark-white.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/core.css">
+    <script src="/js/main.js" defer></script>
 </head>
 <body>
         <div class="header-wrapper">
@@ -61,20 +61,33 @@
                     <div class="content">
                         <div class="section">
                             <div class="mb20 clear" id="">
-                                <h1 class="heading inherit">IKillable</h1>
+                                <h1 class="heading inherit">EnemyState</h1>
                                 <div class="clear">
                                 </div>
-                                <p class="cl mb0 left mr10">interface in Gameplay.HealthSystem</p>
+                                <p class="cl mb0 left mr10">class in AI</p>
+                                <p class="cl mb0 left mr10">/</p>
+                                <p class="cl mb0 left">Implemented in: <u>---</u></p>
                                 <div class="clear">
                                 </div>
+        
                                 <div class="clear">
                                 </div>
                             </div>
                             <div class="subsection">
-                                <h3>Description</h3>
-                                <p> Interface for class capable to die.</p>
+                                <div class="signature">
+                                    <div class="signature-CS sig-block">
+                                        <span style="color:red;">
+                                        </span>
+                                    </div>
+                                </div>
                             </div>
-                            <br>
+                            <div class="subsection">
+                                <h3>Description</h3>
+                                <p> Enum for the state of the enemy.
+                                    <br><br>
+                                </p>
+                            </div>
+                            <!-- Table of calls -->
                             <div class="subsection">
                                 <h3>Public Methods</h3>
                                 <table class="list">
@@ -84,15 +97,15 @@
                                     </tr></thead>
                                     <tbody>
                                         <tr>
-                                            <td class="lbl"><code class="mono">DeathEvent</code></td>
+                                            <td class="lbl"><code class="mono">Idle</code></td>
                                             <td class="desc">
-                                                Handles an event variable. This will propagate another event. Returns a UnityEvent.
+                                                Will set the enemy to an idle state.
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="lbl"><code class="mono">Die</code></td>
+                                            <td class="lbl"><code class="mono">Stalking</code></td>
                                             <td class="desc">
-                                                Function that will handle how the class will die.
+                                                Will set the enemy to a stalking state.
                                             </td>
                                         </tr>
                                     </tbody>

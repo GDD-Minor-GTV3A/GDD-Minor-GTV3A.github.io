@@ -6,9 +6,9 @@
     <meta name="description" content="Documentation for The Herd project, including setup guides, usage instructions, and API references.">
     <meta name="author" content="The Herd Team">
     <title>The Herd Documentation</title>
-    <link rel="icon" href="../images/github-mark-white.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/core.css">
-    <script src="../js/main.js" defer></script>
+    <link rel="icon" href="images/github-mark-white.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/core.css">
+    <script src="js/main.js" defer></script>
 </head>
 <body>
         <div class="header-wrapper">
@@ -61,33 +61,20 @@
                     <div class="content">
                         <div class="section">
                             <div class="mb20 clear" id="">
-                                <h1 class="heading inherit">SheepAnimState</h1>
+                                <h1 class="heading inherit">IPlayerTool</h1>
                                 <div class="clear">
                                 </div>
-                                <p class="cl mb0 left mr10">class in AI</p>
-                                <p class="cl mb0 left mr10">/</p>
-                                <p class="cl mb0 left">Implemented in: <u>Core.AI.Sheep</u></p>
+                                <p class="cl mb0 left mr10">interface in Core.Shared</p>
                                 <div class="clear">
                                 </div>
-        
                                 <div class="clear">
-                                </div>
-                            </div>
-                            <div class="subsection">
-                                <div class="signature">
-                                    <div class="signature-CS sig-block">
-                                        <span style="color:red;">
-                                        </span>
-                                    </div>
                                 </div>
                             </div>
                             <div class="subsection">
                                 <h3>Description</h3>
-                                <p> Enum for the animation states of the sheep.
-                                    <br><br>
-                                </p>
+                                <p> Interface for every tool that can be used by character.</p>
                             </div>
-                            <!-- Table of calls -->
+                            <br>
                             <div class="subsection">
                                 <h3>Public Methods</h3>
                                 <table class="list">
@@ -97,27 +84,51 @@
                                     </tr></thead>
                                     <tbody>
                                         <tr>
-                                            <td class="lbl"><code class="mono">Idle</code></td>
+                                            <td class="lbl"><code class="mono">HideTool</code></td>
                                             <td class="desc">
-                                                Sets the sheep animation state to idle.
+                                                Use this to hide the character tool.
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="lbl"><code class="mono">Walk</code></td>
+                                            <td class="lbl"><code class="mono">MainUsageFinished</code></td>
                                             <td class="desc">
-                                                Sets the sheep animation state to a walking state.
+                                                Called when left mouse button is released.
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="lbl"><code class="mono">Run</code></td>
+                                            <td class="lbl"><code class="mono">MainUsageStarted</code></td>
                                             <td class="desc">
-                                                Sets the sheep animation state to a run state.
+                                                Called when the left mouse button is pressed. Takes an <a href="">Observable</a> as parameter.
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="lbl"><code class="mono">Death</code></td>
+                                            <td class="lbl"><code class="mono">Reload</code></td>
                                             <td class="desc">
-                                                Sets the sheep animation state to a death state.
+                                                Logic of tool reload.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">SecondaryUsageFinished</code></td>
+                                            <td class="desc">
+                                                Called when the right mouse button is released.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">SecondaryUsageStarted</code></td>
+                                            <td class="desc">
+                                                Called when the right mouse button is pressed. Takes an <a href="">Observable</a> as parameter.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">ShowTool</code></td>
+                                            <td class="desc">
+                                                Use this to show the character tool.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">TryBark</code></td>
+                                            <td class="desc">
+                                                Use this to make your dog bark.
                                             </td>
                                         </tr>
                                     </tbody>

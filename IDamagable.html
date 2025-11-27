@@ -6,9 +6,9 @@
     <meta name="description" content="Documentation for The Herd project, including setup guides, usage instructions, and API references.">
     <meta name="author" content="The Herd Team">
     <title>The Herd Documentation</title>
-    <link rel="icon" href="../images/github-mark-white.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/core.css">
-    <script src="../js/main.js" defer></script>
+    <link rel="icon" href="images/github-mark-white.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/core.css">
+    <script src="js/main.js" defer></script>
 </head>
 <body>
         <div class="header-wrapper">
@@ -61,35 +61,20 @@
                     <div class="content">
                         <div class="section">
                             <div class="mb20 clear" id="">
-                                <h1 class="heading inherit">CameraType</h1>
+                                <h1 class="heading inherit">IDamagable</h1>
                                 <div class="clear">
                                 </div>
-                                <p class="cl mb0 left mr10">class in Gameplay</p>
-                                <p class="cl mb0 left mr10">/</p>
-                                <p class="cl mb0 left">Implemented in: <u>Gameplay.CameraSettings</u></p>
+                                <p class="cl mb0 left mr10">interface in Gameplay.HealthSystem</p>
                                 <div class="clear">
                                 </div>
-        
                                 <div class="clear">
-                                </div>
-                            </div>
-                            <div class="subsection">
-                                <div class="signature">
-                                    <div class="signature-CS sig-block">
-                                        <span style="color:red;">
-                                        </span>
-                                    </div>
                                 </div>
                             </div>
                             <div class="subsection">
                                 <h3>Description</h3>
-                                <p> Enum for the mode of the camera.
-                                    <br><br>
-                                    Can be set in the <code class="mono">CameraConfig</code> scriptableObject.
-                                    <br><br>
-                                </p>
+                                <p> Interface for class capable of recieving damage.</p>
                             </div>
-                            <!-- Table of calls -->
+                            <br>
                             <div class="subsection">
                                 <h3>Public Methods</h3>
                                 <table class="list">
@@ -99,15 +84,16 @@
                                     </tr></thead>
                                     <tbody>
                                         <tr>
-                                            <td class="lbl"><code class="mono">Orthographic</code></td>
+                                            <td class="lbl"><code class="mono">DamageEvent</code></td>
                                             <td class="desc">
-                                                Will set the camera to an orthographic mode.
+                                                Handles an event variable. This will propagate another event. Returns a UnityEvent.
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="lbl"><code class="mono">Perspective</code></td>
+                                            <td class="lbl"><code class="mono">TakeDamage</code></td>
                                             <td class="desc">
-                                                Will set the camera to a perspective mode.
+                                                Function that will handle how the class will take damage. Takes a float as a parameter.
+                                                Call this funciton to inflict damage to the implementing class.
                                             </td>
                                         </tr>
                                     </tbody>

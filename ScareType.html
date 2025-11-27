@@ -6,9 +6,9 @@
     <meta name="description" content="Documentation for The Herd project, including setup guides, usage instructions, and API references.">
     <meta name="author" content="The Herd Team">
     <title>The Herd Documentation</title>
-    <link rel="icon" href="../images/github-mark-white.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/core.css">
-    <script src="../js/main.js" defer></script>
+    <link rel="icon" href="images/github-mark-white.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/core.css">
+    <script src="js/main.js" defer></script>
 </head>
 <body>
         <div class="header-wrapper">
@@ -61,12 +61,12 @@
                     <div class="content">
                         <div class="section">
                             <div class="mb20 clear" id="">
-                                <h1 class="heading inherit">Required</h1>
+                                <h1 class="heading inherit">ScareType</h1>
                                 <div class="clear">
                                 </div>
-                                <p class="cl mb0 left mr10">class in Core.Shared</p>
+                                <p class="cl mb0 left mr10">class in Gameplay.Dog</p>
                                 <p class="cl mb0 left mr10">/</p>
-                                <p class="cl mb0 left">Implemented in: <u>Core.Shared.Utilities</u></p>
+                                <p class="cl mb0 left">Implemented in: <u> --- </u></p>
                                 <div class="clear">
                                 </div>
         
@@ -83,39 +83,60 @@
                             </div>
                             <div class="subsection">
                                 <h3>Description</h3>
-                                <p> Force the user to assign an object to a field.
+                                <p> Enums for different types of scare.
                                     <br><br>
-                                    Unity still runs with empty or null fields. To avoid checks or runtime errors, add the <code class="mono">
-                                    [Required]</code> attribute to them.
+                                    This enums defines what is the source of the scare. It is a parameter of the <code class="mono">OnScared</code>
+                                    function in the <a href="IScareable.html">IScareable</a> interface.
                                     <br><br>
-                                    Unity will show a warning under the assigned field and will run a check before entering play mode.
-                                    This is done to prevent <code class="mono">NullReferenceException</code> and to ensure that every field that
-                                    requires a set reference is not empty.
-                                    <br><br>
-                                    To prevent anyone from entering playmode before all fields are assigned, Unity will check every object in the 
-                                    hierarchy that may use the <code class="mono">[Required]</code> attribute, checking that the attribute is not 
-                                    empty. If no error occurs playmonde will start without problems, otherwise playmonde won't start and the 
-                                    console will show log errors pointing at the exacts scripts that needs a reference.
                                 </p>
                             </div>
-                            <div class="subsection" tabindex="0" style="position: relative;"><button class="copy-code"
-                                    title="Copy" type="button" aria-label="Copy code sample to the clipboard"
-                                    style="opacity: 0;"></button>
-                                    <pre class="codeExampleCS">
-using UnityEngine;
-using Core.Shared.Utilities<br>
-public class ExampleScript : MonoBehaviour
-{
-    //This field does not need a reference
-    public float number = 20;<br>
-    //This field needs a reference for it to work as intended
-    [<a href="Required.html">Required</a>] public Health healthScript;<br>
-    void OnCollisionEnter(Collider collider)
-    {
-        healthScript.Damage(number);
-    }
-}</pre>
-                                <div aria-live="polite" class="sr-only"></div>
+                            <!-- Table of calls -->
+                            <div class="subsection">
+                                <h3>Public Methods</h3>
+                                <table class="list">
+                                    <thead><tr>
+                                        <th>Method</th>
+                                        <th>Description</th>
+                                    </tr></thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">DogBark</code></td>
+                                            <td class="desc">
+                                                The source comes from a dog bark.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">Growl</code></td>
+                                            <td class="desc">
+                                                The source comes from a growl.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">Explosion</code></td>
+                                            <td class="desc">
+                                                The source comes from an explosion.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">Gunshot</code></td>
+                                            <td class="desc">
+                                                The source comes from a gunshot.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">Thunder</code></td>
+                                            <td class="desc">
+                                                The source comes from a thunder.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="lbl"><code class="mono">Other</code></td>
+                                            <td class="desc">
+                                                The source comes from something else.
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                         <div class="footer-wrapper">
