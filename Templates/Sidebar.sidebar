@@ -19,6 +19,18 @@
                             </ul>
                     </li>
                 </ul>
+                <ul> <!-- Audio -->
+                    <li class="nl">
+                        <div class="arrow collapsed"></div>
+                        <span>Audio</span>
+                            <ul style="display: none;">
+                                <li class="nl">
+                                    <div class="leafnode"></div>
+                                    <a href="AudioManager.html" class>AudioManager</a>
+                                </li>
+                            </ul>
+                    </li>
+                </ul>
                 <ul> <!-- Enums -->
                     <li class="nl">
                         <div class="arrow collapsed"></div>
